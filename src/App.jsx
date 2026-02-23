@@ -1,4 +1,3 @@
-
 import './App.css';
 import { useEffect, useState } from 'react';
 
@@ -14,8 +13,9 @@ const getInitialTheme = () => {
   return false;
 };
 
+
 function App() {
-  const [isDark, setIsDark] = useState(getInitialTheme);
+  const [isDark] = useState(getInitialTheme);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Sync Theme
@@ -46,7 +46,7 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  const handleThemeToggle = () => setIsDark(!isDark);
+
   const closeMenu = () => setIsMenuOpen(false);
 
   // Reusable SVG Icon variables
@@ -89,71 +89,60 @@ function App() {
         </button>
       </nav>
 
-      {/* --- Theme Toggle --- */}
-      <button id="theme-toggle" onClick={handleThemeToggle} aria-label="Toggle Dark Mode">
-        {isDark ? (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        )}
-      </button>
+
 
       <div className="portfolio-container">
         
-        {/* --- Hero Section --- */}
-        <header className="hero-improved reveal">
-          <p className="hero-overline">Hi, my name is</p>
-          <h1 className="hero-title">Subhajyoti Maity.</h1>
-          <h2 className="hero-tagline">I specialize in <span className="highlight">Artificial Intelligence & Machine Learning.</span></h2>
-          <p className="hero-desc">
-            I'm a developer based in Kolkata specializing in building exceptional digital experiences. Currently, I'm focused on deep learning, algorithms, and scalable web architectures.
-          </p>
-          <div className="hero-buttons">
-            <a href="#projects" className="cta">Check out my work!</a>
-          </div>
-        </header>
-
-        {/* --- About & Skills Section --- */}
-        <section id="about" className="reveal">
-          <h2 className="section-title">About Me</h2>
-          <div className="about-content">
-            
-            {/* Left Side: Bio & Photo */}
-            <div className="about-bio">
-              <img src="https://avatars.githubusercontent.com/u/138799270?v=4" alt="Subhajyoti" className="profile-photo" />
-              
-              <p style={{ marginBottom: '1rem' }}>
-                Hello! I'm Subhajyoti, a developer based in Kolkata, West Bengal. I am currently pursuing a Bachelor of Computer Science & Engineering with a specialization in Artificial Intelligence and Machine Learning from Netaji Subhash Engineering College, Garia, expecting to graduate in 2026.
-              </p>
-              <p style={{ marginBottom: '1.5rem' }}>
-                As a proactive learner, I have gained hands-on experience through academic projects in Machine Learning and Full-Stack Development. I enjoy developing practical solutions involving data processing, model implementation, and scalable web applications. I am eager to apply my technical skills, learn from industry professionals, and contribute to real-world AI-driven projects!
-              </p>
-            </div>
-
-            {/* Right Side: Skill Cards Layout */}
-            <div className="about-skills">
-              <h3 style={{ color: 'var(--text-main)', marginBottom: '1.5rem', fontSize: '1.4rem', fontWeight: 800 }}>Technical Arsenal</h3>
-              
-              <div className="skills-grid">
-                <div className="skill-card">
-                  <h4>💻 Languages & Web</h4>
-                  <p>Python, Java, JavaScript, React, HTML5, CSS3, Tailwind CSS</p>
+        {/* --- Unified Hero/About Slide --- */}
+        <section id="hero-about" className="hero-about-slide reveal">
+          <div className="hero-about-grid">
+            {/* Left: Hero Content */}
+            <div className="hero-about-left">
+              <section className="about-section-unified about-section-modern about-section-flex">
+                <div className="about-left">
+                  <h1 className="hero-title about-gradient">Hello! I'm Subhajyoti Maity </h1>
+                  <div className="about-text-unified colorful-about-text">
+                    <div className="about-bio-unified">
+                      <p className="about-main-text about-gradient">
+                        A developer based in Kolkata, West Bengal. I am currently pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning from Netaji Subhash Engineering College, Garia, expecting to graduate in 2026.
+                      </p>
+                      <p className="about-main-text about-gradient">
+                        As a proactive learner, I have gained hands-on experience through academic projects in Machine Learning and Full-Stack Development. I enjoy developing practical solutions involving data processing, model implementation, and scalable web applications. I am eager to apply my technical skills, learn from industry professionals, and contribute to real-world AI-driven projects!
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="skill-card">
-                  <h4>⚙️ Backend</h4>
-                  <p>TypeScript, Node.js, Express.js, Flask, Streamlit</p>
+                <div className="about-photo-right">
+                        <img src="/my%20photoo.jpg" alt="Subhajyoti Maity" className="about-photo-large-clear" />
                 </div>
-                <div className="skill-card">
-                  <h4>🤖 AI & ML</h4>
-                  <p>TensorFlow, PyTorch, Scikit-learn, Pandas, Numpy</p>
-                </div>
-                <div className="skill-card">
-                  <h4>🛠️ Tools & DB</h4>
-                  <p>Git, GitHub, SQL, MongoDB Atlas</p>
-                </div>
+              </section>
+              <div className="hero-buttons">
+                <a href="#projects" className="cta hero-cta-animated">Check out my work!</a>
               </div>
             </div>
-
+            {/* Right side removed as per user request */}
+          </div>
+          {/* Technical Arsenal below grid, full width */}
+          <div className="about-skills">
+            <h3 style={{ color: 'var(--text-main)', marginBottom: '2rem', fontSize: '1.5rem', fontWeight: 800 }}>Technical Arsenal</h3>
+            <div className="skills-grid">
+              <div className="skill-card">
+                <h4>💻 Languages & Web</h4>
+                <p>Python, Java, JavaScript, React, HTML5, CSS3, Tailwind CSS</p>
+              </div>
+              <div className="skill-card">
+                <h4>⚙️ Backend</h4>
+                <p>TypeScript, Node.js, Express.js, Flask, Streamlit</p>
+              </div>
+              <div className="skill-card">
+                <h4>🤖 AI & ML</h4>
+                <p>TensorFlow, PyTorch, Scikit-learn, Pandas, Numpy</p>
+              </div>
+              <div className="skill-card">
+                <h4>🛠️ Tools & DB</h4>
+                <p>Git, GitHub, SQL, MongoDB Atlas</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -286,7 +275,7 @@ function App() {
           </div>
         </section>
 
-        {/* --- FIXED UNIFORM CERTIFICATIONS SECTION --- */}
+        {/* --- Certifications Section --- */}
         <section id="certifications" className="reveal">
           <h2 className="section-title">Certifications</h2>
           <ul className="cert-list">
@@ -318,7 +307,7 @@ function App() {
           </ul>
         </section>
 
-        {/* --- EXACT SCREENSHOT MATCH: CONTACT SECTION --- */}
+        {/* --- Contact Section --- */}
         <section id="contact" className="reveal contact-section">
           <p className="contact-overline">04. What's Next?</p>
           <h2 className="contact-title">Get In Touch</h2>
@@ -332,7 +321,7 @@ function App() {
           </div>
         </section>
 
-        {/* --- PERFECT FOOTER --- */}
+        {/* --- Footer --- */}
         <footer className="footer reveal">
           <div className="social-icons-footer">
             <a href="https://github.com/Subhajyoti-Maity" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
