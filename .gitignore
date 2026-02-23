@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+# Dependency folders
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Local environment
+*.local
+.env*
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
