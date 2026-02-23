@@ -35,12 +35,3 @@ npm install
 npm run dev
 ```
 
-## Features
-- Glassmorphic UI
-- Dark/Light theme toggle
-- Responsive design
-- Project showcase
-- Contact section with email and social links
-
-## CV
-Upload your CV in the `public` folder and link to it in your site.
