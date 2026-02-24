@@ -753,19 +753,27 @@ section {
 }
 
 .skill-card h4 {
-    color: var(--text-main);
     font-size: 1.05rem;
     margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    background: linear-gradient(90deg, #00b4d8 0%, #48cae4 40%, #5f5fff 80%, #b388ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; removed for compatibility */
 }
 
 .skill-card p {
     font-size: 0.9rem;
-    color: var(--text-muted);
     line-height: 1.6;
     margin: 0;
+    background: linear-gradient(90deg, #00b4d8 0%, #48cae4 40%, #5f5fff 80%, #b388ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; removed for compatibility */
 }
 
 /* --- Projects Grid --- */
