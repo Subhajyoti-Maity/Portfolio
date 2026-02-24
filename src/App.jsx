@@ -78,7 +78,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-brand">SM</div>
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <a href="#hero-about" onClick={closeMenu}>About</a>
+            <a href="#about" onClick={closeMenu}>About</a>
           <a href="#projects" onClick={closeMenu}>Work</a>
           <a href="#certifications" onClick={closeMenu}>Certifications</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
