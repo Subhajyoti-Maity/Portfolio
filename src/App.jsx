@@ -291,7 +291,7 @@ function App() {
             <li className="cert-item">
               <div className="cert-header">
                 <span className="cert-icon">{certDocIcon}</span>
-                <span className="cert-title">Hackerrank SQL (Basic) Certificate</span>
+                  <span className="cert-title">Hackerrank Python (Basic) Certificate</span>
               </div>
               <a href="https://www.hackerrank.com/certificates/3f4dcd660ae8" target="_blank" rel="noopener noreferrer" className="cta cert-btn">View Credential ↗</a>
             </li>
@@ -299,7 +299,7 @@ function App() {
             <li className="cert-item">
               <div className="cert-header">
                 <span className="cert-icon">{certDocIcon}</span>
-                <span className="cert-title">Hackerrank Python (Basic) Certificate</span>
+                  <span className="cert-title">Hackerrank Java (Basic) Certificate</span>
               </div>
               <a href="https://www.hackerrank.com/certificates/e69966d2412a" target="_blank" rel="noopener noreferrer" className="cta cert-btn">View Credential ↗</a>
             </li>
